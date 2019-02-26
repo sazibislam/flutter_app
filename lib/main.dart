@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.teal,
       body: new Center(
         child: new Text(
-          "Welcome to Tic Tac Toe. \n\nA Great game developed in Dart language. You never lose here. \nEnjoy!",
+          "Welcome to Tic Tac Toe.\n\nA Great game developed in Dart language. You never lose here.\nEnjoy!",
           style: new TextStyle(fontSize: 18.0, color: Color(0xFFFFFFFF)),
           textAlign: TextAlign.center,
         ),
