@@ -29,7 +29,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   startTime() async {
-    var _duration = new Duration(seconds: 2);
+    var _duration = new Duration(seconds: 5);
     return new Timer(_duration, navigationPage);
   }
 
@@ -46,8 +46,13 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      backgroundColor: Colors.teal,
       body: new Center(
-        child: new Text("Welcome to Tic Tac To"),
+        child: new Text(
+          "Welcome to Tic Tac Too. \n\nA Great game developed in Dart language. You never lose here. \nEnjoy!",
+          style: new TextStyle(fontSize: 18.0, color: Color(0xFFFFFFFF)),
+          textAlign: TextAlign.center,
+        ),
       ),
     );
   }
