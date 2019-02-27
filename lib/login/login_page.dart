@@ -83,9 +83,10 @@ class _LoginPageState extends State<LoginPage> implements LoginPageContract {
     );
 
     return new Scaffold(
-      appBar: new AppBar(
+      /* appBar: new AppBar(
         title: new Text("Login"),
-      ),
+      ),*/
+      backgroundColor: Colors.white,
       key: scaffoldKey,
       body: new Container(
         child: new Center(
@@ -112,7 +113,7 @@ class _LoginPageState extends State<LoginPage> implements LoginPageContract {
     });
     var db = new DatabaseHelper();
     await db.saveUser(user);
-    SharedPrefHelper().saveName("name");
+    SharedPrefHelper().saveName(user.toString());
     Navigator.of(context).pushReplacementNamed("/HomePage");
   }
 }
