@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/home_page.dart';
+import 'package:flutter_app/login/login_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
       ),
       home: new SplashScreen(),
       routes: <String, WidgetBuilder>{
-        '/HomePage': (BuildContext context) => new HomePage()
+        '/HomePage': (BuildContext context) => new HomePage(),
+        '/LoginPage': (BuildContext context) => new LoginPage()
       },
       debugShowCheckedModeBanner: false,
     );
@@ -34,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed('/HomePage');
+    Navigator.of(context).pushReplacementNamed('/LoginPage');
   }
 
   @override
