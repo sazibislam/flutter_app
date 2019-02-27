@@ -156,7 +156,7 @@ class _HomePageState extends State<HomePage> {
             context: context,
             builder: (_) =>
             new CustomDialog(
-                SharedPrefHelper().getName("username").toString(),
+                SharedPrefHelper().getName("username").toString() + " Won",
                 "Press the reset button to start again.",
                 resetGame));
       } else {
