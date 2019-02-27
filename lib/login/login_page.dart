@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/database_helper.dart';
+import 'package:flutter_app/data/shared_pref_helper.dart';
 import 'package:flutter_app/login/login_presenter.dart';
 import 'package:flutter_app/models/user.dart';
 
@@ -105,13 +106,13 @@ class _LoginPageState extends State<LoginPage> implements LoginPageContract {
 
   @override
   void onLoginSuccess(User user) async {
-    // TODO: implement onLoginSuccess
     _showSnackBar(user.toString());
     setState(() {
       _isLoading = false;
     });
     var db = new DatabaseHelper();
     await db.saveUser(user);
+    SharedPrefHelper().saveName("name");
     Navigator.of(context).pushReplacementNamed("/HomePage");
   }
 }

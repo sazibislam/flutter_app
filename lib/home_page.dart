@@ -1,8 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app/custom_dailog.dart';
+import 'package:flutter_app/data/shared_pref_helper.dart';
 import 'package:flutter_app/game_button.dart';
+import 'package:flutter_app/utils/custom_dailog.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -153,8 +154,11 @@ class _HomePageState extends State<HomePage> {
       if (winner == 1) {
         showDialog(
             context: context,
-            builder: (_) => new CustomDialog("Player 1 Won",
-                "Press the reset button to start again.", resetGame));
+            builder: (_) =>
+            new CustomDialog(
+                SharedPrefHelper().getName("name").toString(),
+                "Press the reset button to start again.",
+                resetGame));
       } else {
         showDialog(
             context: context,
