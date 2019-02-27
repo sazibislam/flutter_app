@@ -4,4 +4,4 @@
 >Dart
 >MVP
 
-A great Tic Tac Too game developed using dart language where you will never lose. Enjoy.
+A great Tic Tac Toe game developed using dart language where you will never lose. Enjoy.
