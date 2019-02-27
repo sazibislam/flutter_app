@@ -1,5 +1,7 @@
-# flutter_app
+# Tic Tac Toe
 
-A new Flutter application.
+>Flutter
+>Dart
+>MVP
 
 A great Tic Tac Too game developed using dart language where you will never lose. Enjoy.
